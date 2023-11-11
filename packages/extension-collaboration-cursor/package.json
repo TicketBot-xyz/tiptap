@@ -29,7 +29,7 @@
     "dist"
   ],
   "devDependencies": {
-    "@tiptap/core": "^2.2.0-rc.4",
+    "@tiptap/core": "^2.2.1",
     "y-prosemirror": "1.0.20"
   },
   "peerDependencies": {
