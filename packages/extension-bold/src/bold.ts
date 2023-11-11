@@ -30,8 +30,6 @@ declare module '@tiptap/core' {
 
 export const starInputRegex = /(?:^|\s)((?:\*\*)((?:[^*]+))(?:\*\*))$/
 export const starPasteRegex = /(?:^|\s)((?:\*\*)((?:[^*]+))(?:\*\*))/g
-export const underscoreInputRegex = /(?:^|\s)((?:__)((?:[^__]+))(?:__))$/
-export const underscorePasteRegex = /(?:^|\s)((?:__)((?:[^__]+))(?:__))/g
 
 export const Bold = Mark.create<BoldOptions>({
   name: 'bold',
@@ -89,10 +87,6 @@ export const Bold = Mark.create<BoldOptions>({
         find: starInputRegex,
         type: this.type,
       }),
-      markInputRule({
-        find: underscoreInputRegex,
-        type: this.type,
-      }),
     ]
   },
 
@@ -100,10 +94,6 @@ export const Bold = Mark.create<BoldOptions>({
     return [
       markPasteRule({
         find: starPasteRegex,
-        type: this.type,
-      }),
-      markPasteRule({
-        find: underscorePasteRegex,
         type: this.type,
       }),
     ]
